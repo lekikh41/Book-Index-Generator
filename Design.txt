@@ -1,0 +1,60 @@
+Here is an object-oriented design for the program:
+
+Class: BookIndex
+   -Fields: 
+       
+        *HashMap<String, HashSet<Integer>> index - to store the index of words and the list of pages on which each word is present.
+         
+        * ArrayList<String> excludeWords - to store the common words that should not be indexed
+    -Methods:
+        
+        *void readFiles(String[] fileNames, String excludeFile) - to read the pages and exclude words file
+
+        *void generateIndex() - to generate the index of words
+  
+        *void writeToFile(String fileName) - to write the index to a file
+
+Class: Page
+    -Fields: 
+        
+        *int pageNum - to store the page number
+
+        *String[] words - to store the words in the page
+    
+     -Methods:
+        
+        *Page(int pageNum, String[] words) - a constructor to initialize the page number and words
+
+Class: FileReader
+    -Fields:
+       
+        *None
+    
+     -Methods
+       
+        * String[] readFile(String fileName) - to read a file and return its contents as a String array
+
+Class: ExcludeWords
+    -Fields:
+        
+        *ArrayList<String> excludeWords - to store the common words that should not be indexed
+
+     -Methods  
+        
+        *ArrayList<String> excludeWords - to store the common words that should not be indexed
+
+Class: IndexWriter
+    -Fields:
+        
+        *None
+
+     -Methods
+
+        *void writeToFile(HashMap<String, HashSet<Integer>> index, String fileName) - to write the index to a file   
+
+
+** This design provides a clear separation of responsibilities, making it easier to maintain and 
+modify the code in the future. Each class has a clear purpose and is responsible for a specific task, 
+making the code more organized and easier to understand. **
+
+
